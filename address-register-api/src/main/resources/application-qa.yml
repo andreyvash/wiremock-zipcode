@@ -1,0 +1,6 @@
+server:
+  port: 8080
+
+service:
+  cep:
+    endpoit: http://localhost:8081/ws/

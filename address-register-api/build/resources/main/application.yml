@@ -1,0 +1,6 @@
+server:
+  port: 8081
+
+service:
+  cep:
+    endpoit: http://meucep.com.br/ws/
