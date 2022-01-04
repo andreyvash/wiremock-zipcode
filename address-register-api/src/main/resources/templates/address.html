@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>Cadastro Endereço</title>
+    <title>Address Form</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
 
@@ -10,34 +10,34 @@
 
 <form action="#" th-action="@{/address}" th-object="${address}" method="post">
     <fieldset>
-        <legend>Cadastro de Endereço</legend>
+        <legend>Address Form</legend>
 
         <p>
-            CEP: <input type="text" th:field="*{address.zipCode}" />
+            ZipCode: <input type="text" th:field="*{address.zipCode}" />
         </p>
 
         <p>
-            Logradouro: <input type="text" th:field="*{address.address}" required/>
+            Street: <input type="text" th:field="*{address.address}" required/>
         </p>
 
         <p>
-            Número: <input type="text" th:field="*{address.number}" required/>
+            Number: <input type="text" th:field="*{address.number}" required/>
         </p>
 
         <p>
-            Complemento: <input type="text" th:field="*{address.complement}"/>
+            Complement: <input type="text" th:field="*{address.complement}"/>
         </p>
 
         <p>
-            Bairro: <input type="text" th:field="*{address.neighborhood}" required/>
+            Neighborhood: <input type="text" th:field="*{address.neighborhood}" required/>
         </p>
 
         <p>
-            Cidade: <input type="text" th:field="*{address.city}" required/>
+            City: <input type="text" th:field="*{address.city}" required/>
         </p>
 
         <p>
-            Estado: <select th:field="*{address.state}" required>
+            State: <select th:field="*{address.state}" required>
                 <option value="AC">Acre</option>
                 <option value="AL">Alagoas</option>
                 <option value="AP">Amapá</option>

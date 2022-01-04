@@ -27,12 +27,12 @@ public class AddressService {
 
         try {
             LOG.info(String.format("EndPoint [%s]...", cepConfig.getEndpoint()));
-            ResponseEntity<ZipCodeResponse> forEntity = restTemplate.getForEntity(String.format("%s/%s/json", "http://localhost:8081/ws/", zipCode), ZipCodeResponse.class);
+            ResponseEntity<ZipCodeResponse> forEntity = restTemplate.getForEntity(String.format("%s/%s/json", cepConfig.getEndpoint(), zipCode), ZipCodeResponse.class);
 
             return forEntity.getBody();
         } catch (Exception ex) {
 
-            LOG.log(Level.WARNING, "Erro ao buscar o CEP", ex);
+            LOG.log(Level.WARNING, "Error searching Zipcode", ex);
 
             return new ZipCodeResponse();
         }
